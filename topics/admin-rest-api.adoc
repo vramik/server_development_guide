@@ -10,7 +10,7 @@ Full API documentation is available at http://keycloak.org/docs and can also be 
 
 === Example using CURL
 
-Obtain access token for user with username _admin_ and password _password_:
+Obtain access token for user with username `admin` and password `password`:
 ....
 DATA="client_id=admin-cli"
 DATA+="&username=admin"
@@ -24,7 +24,7 @@ OUTPUT=`curl -s --data $DATA $URL`
 ACCESS_TOKEN=`echo $OUTPUT | grep -oE '"access_token":"[^"]*"' | cut -d '"' -f 4`
 ....
 
-NOTE: By default this token expires within 1 minutes.
+NOTE: By default this token expires in 1 minute
 
 You can then invoke the API by including the token in the authorization header. The following example shows how to get the details of the master realm:
 
